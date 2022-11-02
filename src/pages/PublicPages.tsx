@@ -1,9 +1,9 @@
 import { Navigate, Outlet } from "react-router-dom";
-import { useAuth } from "../hooks/useAuthContext";
+import { useAuthContext } from "../hooks/useAuthContext";
 import LoadingPage from "./LoadingPage";
 
 const PublicPages = () => {
-  const auth = useAuth();
+  const auth = useAuthContext();
 
   return auth.loading ? (
     <LoadingPage />

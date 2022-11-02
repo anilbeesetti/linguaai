@@ -1,0 +1,24 @@
+{
+    "navigationFallback" : {
+        "rewrite": "/index.html",
+        "exclude": ["/images/*.{png,jpg,gif}", "/css/*"]
+    },
+    "routes": [
+        {
+            "route": "/login/microsoft",
+            "rewrite": "/.auth/login/aad"
+        },
+        {
+            "route": "/login/google",
+            "rewrite": "/.auth/login/google"
+        },
+        {
+            "route": "/login/meta",
+            "rewrite": "/.auth/login/facebook"
+        },
+        {
+            "route": "/login/github",
+            "rewrite": "/.auth/login/github"
+        }
+    ]
+}
