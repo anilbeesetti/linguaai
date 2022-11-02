@@ -1,9 +1,14 @@
-type Props = {}
+import LandingNavbar from "../components/LandingNavbar";
+
+type Props = {};
 
 const LandingPage = (props: Props) => {
   return (
-    <div>LandingPage</div>
-  )
-}
+    <div>
+      <LandingNavbar />
+      LandingPage
+    </div>
+  );
+};
 
-export default LandingPage
+export default LandingPage;
