@@ -4,6 +4,9 @@ import TextareaAutosize from "react-textarea-autosize";
 import PrimaryButton from "../../components/PrimaryButton";
 import InputsCard from "../../components/InputsCard";
 import { useTranslationLanguagesData } from "../../hooks/useTranslationLanguagesData";
+import { useTranslateTextData } from "../../hooks/useTranslateTextData";
+import { TypeWriterText } from "../../components/TypeWriterText";
+import ResultCard from "../../components/ResultCard";
 
 type Props = {};
 
@@ -14,12 +17,15 @@ const TranslatePage = (props: Props) => {
 
   const MAX_LENGTH = 2000;
   const { data: languageOptions } = useTranslationLanguagesData();
+  const translate = useTranslateTextData();
 
   const handleTextInput = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     setText(e.target.value.slice(0, MAX_LENGTH));
   };
 
   const handleTranslate = () => {
+    if (!translateToLanguage || !text.trim()) return;
+    translate.mutate({ currentLanguage, translateToLanguage, text });
   };
 
   return (
@@ -58,6 +64,27 @@ const TranslatePage = (props: Props) => {
           Translate
         </PrimaryButton>
       </InputsCard>
+      <ResultCard
+        isLoading={translate.isLoading}
+        isError={translate.isError}
+        isSuccess={translate.isSuccess}
+        error={translate.error?.message!!}
+        title="Translated Text"
+        subtitle="The following code is translated"
+        effect={true}
+      >
+        {translate.data &&
+          translate.data[0].translations.map((translation) => (
+            <div className="flex space-x-2 mt-6">
+              {translate.data[0].translations.length > 1 && (
+                <p className="text-gray-90 text-sm font-medium mt-1">
+                  {translation.to.toUpperCase()}:-
+                </p>
+              )}
+              <TypeWriterText text={translation.text} />
+            </div>
+          ))}
+      </ResultCard>
     </div>
   );
 };
