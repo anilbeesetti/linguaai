@@ -10,6 +10,7 @@ module.exports = {
         text_primary: "#373B52",
         primary_green: "#35999A",
         primary_green_surface: "#D8F0F0",
+        primary_red_surface: "#F0D8D8",
       },
       textColor: {
         primary: "#373B52",
