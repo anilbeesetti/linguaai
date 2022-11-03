@@ -1,9 +1,9 @@
-import logo from "../assets/logo.svg";
-import github from "../assets/github.svg";
-import google from "../assets/google.svg";
-import meta from "../assets/meta.svg";
-import microsoft from "../assets/microsoft.svg";
-import { useAuthContext } from "../hooks/useAuthContext";
+import logo from "../../assets/logo.svg";
+import github from "../../assets/github.svg";
+import google from "../../assets/google.svg";
+import meta from "../../assets/meta.svg";
+import microsoft from "../../assets/microsoft.svg";
+import { useAuthContext } from "../../hooks/useAuthContext";
 
 type Props = {};
 
