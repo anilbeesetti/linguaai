@@ -1,9 +1,9 @@
-import logo from "../../assets/logo.svg";
 import github from "../../assets/github.svg";
 import google from "../../assets/google.svg";
 import meta from "../../assets/meta.svg";
 import microsoft from "../../assets/microsoft.svg";
 import { useAuthContext } from "../../hooks/useAuthContext";
+import LogoLink from "../../components/LogoLink";
 
 type Props = {};
 
@@ -41,8 +41,8 @@ const Loginpage = (props: Props) => {
 
   return (
     <div className="w-full h-full flex flex-col bg-slate-200">
-      <div>
-        <img src={logo} alt="" className="mr-3 h-7 sm:h-9 m-5" />
+      <div className="w-full p-3 sm:p-5">
+        <LogoLink/>
       </div>
       <div className="flex w-full justify-center items-center h-full">
         <section className="hidden sm:flex sm:flex-col h-full w-3/5 bg-slate-300 justify-center rounded-tr-2xl p-5">

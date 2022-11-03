@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/logo.svg";
+import LogoLink from "./LogoLink";
 
 type Props = {};
 
@@ -16,9 +16,7 @@ const LandingNavbar = (props: Props) => {
   return (
     <nav className="px-2 sm:px-4 py-2.5 bg-white">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="/" className="flex items-center">
-          <img src={logo} className="mr-3 h-7 sm:h-9" alt="Lingoline Logo" />
-        </a>
+        <LogoLink />
         <button
           className=" inline-flex items-center p-2 ml-2 text-sm text-black rounded-lg md:hidden hover:bg-gray-300 focus:outline-none"
           onClick={toggleMenu}

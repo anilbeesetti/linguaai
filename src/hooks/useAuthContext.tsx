@@ -20,9 +20,7 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
   const { isLoading, data } = useAuthData();
 
   const login = (loginProvider: string) => {
-    window.location.replace(
-      `/login/${loginProvider}?post_login_redirect_uri=/home`
-    );
+    window.location.href = `/login/${loginProvider}?post_login_redirect_uri=/home`;
   };
 
   const logout = () => {
