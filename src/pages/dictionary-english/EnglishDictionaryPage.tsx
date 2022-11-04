@@ -142,10 +142,12 @@ const EnglishDictionaryPage = (props: Props) => {
                           <h2 className="mt-3 mb-1 text-xl font-medium">
                             Synonyms
                           </h2>
-                          <em className="flex flex-wrap space-x-3 list-none ml-10">
-                            {meaning.synonyms.map((synonym) => (
+                          <em className="flex flex-wrap space-x-2 ml-5">
+                            {meaning.synonyms.map((synonym, i) => (
                               <ClickableWord
-                                word={synonym}
+                                word={`${synonym}${
+                                  meaning.synonyms.length != i + 1 ? ", " : ""
+                                }`}
                                 onClick={() => getNewDef(synonym)}
                               />
                             ))}
@@ -157,10 +159,12 @@ const EnglishDictionaryPage = (props: Props) => {
                           <h2 className="mt-3 mb-1 text-xl font-medium">
                             Antonyms
                           </h2>
-                          <em className="flex flex-wrap space-x-3 list-none ml-10">
-                            {meaning.antonyms.map((antonym) => (
+                          <em className="flex flex-wrap space-x-2 ml-5">
+                            {meaning.antonyms.map((antonym, i) => (
                               <ClickableWord
-                                word={antonym}
+                                word={`${antonym}${
+                                  meaning.antonyms.length != i + 1 ? ", " : ""
+                                }`}
                                 onClick={() => getNewDef(antonym)}
                               />
                             ))}
