@@ -114,6 +114,20 @@ const EnglishDictionaryPage = (props: Props) => {
                         {meaning.partOfSpeech}
                       </a>
                     </div>
+                    <div className="flex space-x-2 mt-1 items-center">
+                      {dict.phonetics.map((phonetic) => (
+                        <div className="flex space-x-2 items-center">
+                          <span>{phonetic.text}</span>
+                          {phonetic.audio && (
+                            <AudioIcon
+                              size={3}
+                              padding={1}
+                              onClick={() => playAudio(phonetic.audio)}
+                            />
+                          )}
+                        </div>
+                      ))}
+                    </div>
                     <h2 className="mt-3 mb-2 text-xl font-medium">
                       Definitions
                     </h2>
