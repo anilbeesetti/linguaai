@@ -26,6 +26,9 @@ module.exports = {
       textColor: {
         primary: "#373B52",
       },
+      fontFamily: {
+        display: ["Playfair Display", "serif"],
+      },
     },
   },
   plugins: [],
