@@ -10,8 +10,7 @@ export interface LookupParams {
 
 const lookupWord = async (lookup: LookupParams) => {
   const response = await axios<IDictionaryLookupResponse[]>({
-    baseURL: "http://localhost:7071/",
-    url: "/api/dictionary",
+    url: "/api/dictionary-lookup",
     method: "get",
     params: {
       from: lookup.sourceLanguage,
