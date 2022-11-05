@@ -1,15 +1,21 @@
 import { useState } from "react";
 import InputsCard from "../../components/InputsCard";
+import ResultCard from "../../components/ResultCard";
 import { SearchInput } from "../../components/SearchInput";
 import StyledOption from "../../components/StyledOption";
 import { useDictionaryLanguagesData } from "./hooks/useDictionaryLanguagesData";
+import {
+  LookupParams,
+  useDictionaryLookupData,
+} from "./hooks/useDictionaryLookupData";
 
 const BilingualDictionaryPage = () => {
   const [word, setWord] = useState("");
+  const [lookupParams, setLookupParams] = useState({} as LookupParams);
   const [sourceLanguage, setSourceLanguage] = useState("");
   const [targetLanguage, setTargetLanguage] = useState("");
   const { data } = useDictionaryLanguagesData();
-
+  const lookup = useDictionaryLookupData(lookupParams);
   const MAX_LENGTH = 100;
 
   const handleTextInput = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -80,6 +86,17 @@ const BilingualDictionaryPage = () => {
           />
         </form>
       </InputsCard>
+      <ResultCard
+        isLoading={lookup.isLoading}
+        isSuccess={lookup.isSuccess}
+        isError={lookup.isError}
+        error=""
+        effect={false}
+        title="Bilingual Dictionary"
+        subtitle="The following are the translations of the word"
+      >
+        <div>results</div>
+      </ResultCard>
     </div>
   );
 };
