@@ -60,7 +60,7 @@ const LandingNavbar = (props: Props) => {
             openMenu ? "" : "hidden"
           } relative w-full md:block md:w-auto`}
         >
-          <ul className="flex flex-col p-4 rounded-lg mt-2 bg-slate-100 border border-gray-300 absolute left-0 right-0 md:static md:flex-row md:items-center md:space-x-8 md:mt-0 md:text-sm md:font-medium md:bg-transparent md:m-0 md:border-0">
+          <ul className="flex flex-col p-4 rounded-lg mt-2 bg-white shadow-md md:shadow-none border border-gray-300 absolute left-0 right-0 md:static md:flex-row md:items-center md:space-x-8 md:mt-0 md:text-sm md:font-medium md:bg-transparent md:m-0 md:border-0">
             {navItems.map((navString) => (
               <li key={navString} className="md:hover:scale-110 transition">
                 <a
@@ -75,7 +75,7 @@ const LandingNavbar = (props: Props) => {
               <Link
                 to="/login"
                 onClick={() => setOpenMenu(false)}
-                className="block py-2 px-4 text-center rounded mt-2 bg-primary hover:bg-primary_hover transition text-white md:mt-0"
+                className="block py-2 px-4 text-center rounded mt-2 bg-primary-500 hover:bg-primary_hover transition text-white md:mt-0"
               >
                 LOGIN
               </Link>

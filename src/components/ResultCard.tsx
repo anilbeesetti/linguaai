@@ -23,16 +23,16 @@ const ResultCard = ({
 }: Props) => {
   return (
     <div
-      className={`p-4 bg-white rounded-md transition shadow-md w-full relative ${
+      className={`p-4 bg-white rounded-2xl transition shadow-lg w-full relative ${
         effect &&
-        "before:content-[''] before:absolute before:block before:inset-0 before:bg-slate-600 before:rounded-md before:-rotate-2 before:-z-[1]"
+        "before:content-[''] before:absolute before:block before:inset-0 before:bg-slate-600 before:rounded-2xl before:-rotate-2 before:-z-[1]"
       }`}
     >
       <div className="flex flex-row items-center gap-2">
         {isLoading ? (
           <div className="flex relative w-7 h-7 rounded-full items-center justify-center">
-            <div className="rounded-full h-6 w-6 bg-primary"></div>
-            <div className=" animate-ping absolute inset-0 rounded-full bg-primary"></div>
+            <div className="rounded-full h-6 w-6 bg-primary-100"></div>
+            <div className=" animate-ping absolute inset-0 rounded-full bg-primary-100"></div>
           </div>
         ) : (
           <ResponseInfoIcon isError={isError} isSuccess={isSuccess} />
@@ -44,7 +44,7 @@ const ResultCard = ({
         </div>
       </div>
       {isError && <div className="mt-3 rounded-md p-2">{error}</div>}
-      {isSuccess && children}
+      {isSuccess && <div className="px-3">{children}</div>}
     </div>
   );
 };

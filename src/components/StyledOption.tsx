@@ -27,7 +27,7 @@ const StyledOption = ({
       </label>
       <select
         id={id}
-        className="bg-gray-50 border border-gray-200 text-sm rounded-md block w-full p-2.5"
+        className="bg-white border border-gray-200 text-sm rounded-md block w-full p-2.5"
         value={value}
         onChange={onChange}
       >

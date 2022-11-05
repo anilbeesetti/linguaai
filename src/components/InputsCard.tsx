@@ -7,7 +7,7 @@ type Props = {
 
 const InputsCard = ({ title, subTitle, icon, children }: Props) => {
   return (
-    <div className="p-4 bg-white rounded-md shadow-md w-full">
+    <div className="p-4 bg-white rounded-md shadow-lg w-full">
       <div className="flex flex-row items-center gap-2">
         <div className="w-fit h-fit rounded-full p-1 bg-slate-300">
           {icon ? (

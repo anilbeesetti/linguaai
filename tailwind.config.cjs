@@ -4,7 +4,18 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: "#008181",
+        primary: {
+          50: "#32b3b3",
+          100: "#28a9a9",
+          200: "#1e9f9f",
+          300: "#149595",
+          400: "#0a8b8b",
+          500: "#008181",
+          600: "#007777",
+          700: "#006d6d",
+          800: "#006363",
+          900: "#005959",
+        },
         primary_hover: "#006d6d",
         primary_surface: "#F3F5FB",
         text_primary: "#373B52",

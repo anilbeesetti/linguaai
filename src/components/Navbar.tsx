@@ -35,7 +35,7 @@ const Navbar = (props: NavbarProps) => {
           </button>
         </div>
         <div className={`${showMenu ? "" : "hidden"} relative w-full z-10`}>
-          <ul className="flex flex-col rounded-lg mt-1 bg-slate-100 border border-gray-300 absolute right-0 w md:text-sm md:font-medium">
+          <ul className="flex flex-col rounded-lg mt-1 bg-white shadow-md border border-gray-300 absolute right-0 w md:text-sm md:font-medium">
             <li>
               <button
                 className="block py-2 px-4 text-center rounded hover:bg-gray-200"
