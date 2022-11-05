@@ -96,6 +96,7 @@ const EnglishDictionaryPage = (props: Props) => {
         effect={false}
         title="Dictionary"
         subtitle="The following are the definitions of word"
+        idleText="Lookup something to get info"
       >
         {definition.data ? (
           <div className="mt-3">

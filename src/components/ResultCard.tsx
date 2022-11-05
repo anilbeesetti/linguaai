@@ -7,6 +7,7 @@ type Props = {
   error: string;
   title: string;
   subtitle: string;
+  idleText?: string;
   effect: boolean;
   children: React.ReactNode;
 };
@@ -17,6 +18,7 @@ const ResultCard = ({
   isError,
   error,
   title,
+  idleText,
   effect,
   subtitle,
   children,
@@ -43,8 +45,11 @@ const ResultCard = ({
           <p className=" text-xs text-gray-500">{subtitle}</p>
         </div>
       </div>
-      {isError && <div className="mt-3 rounded-md p-2">{error}</div>}
-      {isSuccess && <div className="px-3">{children}</div>}
+      {isError ? (
+        <div className="mt-3 rounded-md p-2">{error}</div>
+      ) : (
+        isSuccess && <div className="px-3">{children}</div>
+      )}
     </div>
   );
 };
