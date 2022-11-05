@@ -5,6 +5,7 @@ import StyledOption from "../../components/StyledOption";
 import { OptionType } from "../../types/Types";
 import { useSummarizeData } from "./hooks/useSummarizeData";
 import TextareaAutosize from "react-textarea-autosize";
+import ResultCard from "../../components/ResultCard";
 
 type Props = {};
 
@@ -80,6 +81,45 @@ const TextSummarizePage = (props: Props) => {
           Summarize
         </PrimaryButton>
       </InputsCard>
+      <ResultCard
+        isLoading={summarize.isLoading}
+        isError={summarize.isError}
+        isSuccess={summarize.isSuccess}
+        error={summarize.error?.message!!}
+        title="Summarized text"
+        subtitle="The following text is summarized"
+        effect={true}
+      >
+        {summarize.data?.map((summary) => (
+          <div className="my-5">
+            {summary.results.documents.map((document) => (
+              <div className="flex flex-col space-y-3">
+                {document.sentences.map((sentence) => (
+                  <div className="flex items-start space-x-2">
+                    <div className="w-fit h-fit p-1 mt-1 bg-gray-300 rounded-full">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        strokeWidth={3}
+                        stroke="currentColor"
+                        className="w-2 h-2"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          d="M8.25 4.5l7.5 7.5-7.5 7.5"
+                        />
+                      </svg>
+                    </div>
+                    <h1>{sentence.text}</h1>
+                  </div>
+                ))}
+              </div>
+            ))}
+          </div>
+        ))}
+      </ResultCard>
     </div>
   );
 };
