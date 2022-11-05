@@ -1,5 +1,6 @@
 import { useState } from "react";
 import InputsCard from "../../components/InputsCard";
+import { SearchInput } from "../../components/SearchInput";
 import StyledOption from "../../components/StyledOption";
 import { useDictionaryLanguagesData } from "./hooks/useDictionaryLanguagesData";
 
@@ -71,18 +72,12 @@ const BilingualDictionaryPage = () => {
               }}
             />
           </div>
-          <div className="flex">
-            <input
-              type="text"
-              placeholder="Enter a word to lookup"
-              value={word}
-              onChange={handleTextInput}
-              className="w-full text-gray-900 bg-gray-50 border border-gray-200 text-md rounded-l-md focus:outline-none p-3"
-            />
-            <button className=" bg-primary-500 text-md rounded-r-md hover:scale-105 text-white transition-all duration-150 p-3">
-              Lookup
-            </button>
-          </div>
+          <SearchInput
+            value={word}
+            onValueChange={handleTextInput}
+            placeholder="Enter a word to lookup"
+            buttonText="Lookup"
+          />
         </form>
       </InputsCard>
     </div>

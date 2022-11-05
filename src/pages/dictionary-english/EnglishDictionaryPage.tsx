@@ -5,6 +5,7 @@ import { useDictionaryData } from "./hooks/useDictionaryData";
 import { ClickableWord } from "./components/ClickableWord";
 import { DefinitionComponent } from "./components/DefinitionComponent";
 import { AudioIcon } from "./components/AudioIcon";
+import { SearchInput } from "../../components/SearchInput";
 
 type Props = {};
 
@@ -75,17 +76,13 @@ const EnglishDictionaryPage = (props: Props) => {
           </svg>
         }
       >
-        <form className="flex mt-5" onSubmit={handleSubmit}>
-          <input
-            type="text"
-            placeholder="Enter a word to lookup"
+        <form className="mt-5" onSubmit={handleSubmit}>
+          <SearchInput
             value={text}
-            onChange={handleTextInput}
-            className="w-full text-gray-900 bg-gray-50 border border-gray-200 text-md rounded-l-md focus:outline-none p-3"
+            onValueChange={handleTextInput}
+            placeholder="Enter a word to lookup"
+            buttonText="Lookup"
           />
-          <button className=" bg-primary-500 text-md rounded-r-md hover:scale-105 text-white transition-all duration-150 p-3">
-            Lookup
-          </button>
         </form>
       </InputsCard>
       <ResultCard
