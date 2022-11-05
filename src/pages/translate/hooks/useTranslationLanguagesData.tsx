@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useQuery } from "react-query";
 import { ITranslationLanguages } from "../types/TranslationLanguages";
-import { OptionType } from "../types/Types";
+import { OptionType } from "../../../types/Types";
 
 const fetchTranslationLanguages = async () => {
   const res = await axios.get<ITranslationLanguages>(

@@ -3,8 +3,8 @@ import StyledOption from "../../components/StyledOption";
 import TextareaAutosize from "react-textarea-autosize";
 import PrimaryButton from "../../components/PrimaryButton";
 import InputsCard from "../../components/InputsCard";
-import { useTranslationLanguagesData } from "../../hooks/useTranslationLanguagesData";
-import { useTranslateTextData } from "../../hooks/useTranslateTextData";
+import { useTranslationLanguagesData } from "./hooks/useTranslationLanguagesData";
+import { useTranslateTextData } from "./hooks/useTranslateTextData";
 import { TypeWriterText } from "../../components/TypeWriterText";
 import ResultCard from "../../components/ResultCard";
 
