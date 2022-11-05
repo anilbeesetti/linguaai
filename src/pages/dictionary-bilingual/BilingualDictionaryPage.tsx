@@ -35,6 +35,23 @@ const BilingualDictionaryPage = () => {
     });
   };
 
+  const getErrorMessage = () => {
+    var errorMessage = "";
+
+    if (lookup.error?.message.includes("404")) {
+      errorMessage =
+        "The word you've entered isn't in the dictionary. Try again using the search bar above.";
+    } else if (lookup.error?.message.includes("4")) {
+      errorMessage = "An error occured";
+    } else if (lookup.error?.message.includes("5")) {
+      errorMessage =
+        "An error occured in server. Please try again after sometime.";
+    } else {
+      errorMessage = lookup.error?.message || "";
+    }
+    return errorMessage;
+  };
+
   return (
     <div className="px-4 py-5 flex flex-col gap-5 container mx-auto items-start max-w-6xl">
       <InputsCard
@@ -90,12 +107,14 @@ const BilingualDictionaryPage = () => {
         isLoading={lookup.isLoading}
         isSuccess={lookup.isSuccess}
         isError={lookup.isError}
-        error=""
+        error={getErrorMessage()}
         effect={false}
         title="Bilingual Dictionary"
         subtitle="The following are the translations of the word"
       >
-        <div>results</div>
+        <div className="mt-5">
+          
+        </div>
       </ResultCard>
     </div>
   );
