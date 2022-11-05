@@ -15,6 +15,19 @@ const BilingualDictionaryPage = () => {
     setWord(e.target.value.trim().slice(0, MAX_LENGTH));
   };
 
+  const getCurrentLanguageOptions = () => {
+    return data?.map((dict) => {
+      return { title: dict.name, value: dict.code };
+    });
+  };
+
+  const getDictionaryLanguageOptions = () => {
+    const currentDict = data?.find((dict) => dict.code == sourceLanguage);
+    return currentDict?.translations?.map((dict) => {
+      return { title: dict.name, value: dict.code!! };
+    });
+  };
+
   return (
     <div className="px-4 py-5 flex flex-col gap-5 container mx-auto items-start max-w-6xl">
       <InputsCard
@@ -43,7 +56,7 @@ const BilingualDictionaryPage = () => {
               label="Source language"
               id="current_language"
               defaultValue="Select a base language"
-              options={[]}
+              options={getCurrentLanguageOptions()}
               onChange={(e) => {
                 setSourceLanguage(e.target.value);
               }}
@@ -52,7 +65,7 @@ const BilingualDictionaryPage = () => {
               label="Target language"
               id="translate_to"
               defaultValue="Select a language to search"
-              options={[]}
+              options={getDictionaryLanguageOptions()}
               onChange={(e) => {
                 setTargetLanguage(e.target.value);
               }}
