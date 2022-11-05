@@ -2,6 +2,7 @@ import { QueryClient, QueryClientProvider } from "react-query";
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { AuthContextProvider } from "./hooks/useAuthContext";
 import AuthorizedPages from "./pages/AuthorizedPages";
+import BilingualDictionaryPage from "./pages/dictionary-bilingual/BilingualDictionaryPage";
 import EnglishDictionaryPage from "./pages/dictionary-english/EnglishDictionaryPage";
 import HomePage from "./pages/home/HomePage";
 import LandingPage from "./pages/landing/LandingPage";
@@ -28,6 +29,10 @@ const App = () => {
             <Route
               path="dictionary/english"
               element={<EnglishDictionaryPage />}
+            />
+            <Route
+              path="dictionary/bilingual"
+              element={<BilingualDictionaryPage />}
             />
           </Route>
         </Routes>
