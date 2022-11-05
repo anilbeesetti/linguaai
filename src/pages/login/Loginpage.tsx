@@ -43,7 +43,7 @@ const Loginpage = (props: Props) => {
   return (
     <div className="w-full h-full flex flex-col">
       <div className="w-full p-3 sm:p-5">
-        <LogoLink />
+        <LogoLink to="/" />
       </div>
       <div className="flex w-full justify-center items-center h-full">
         <section className="hidden sm:flex sm:flex-col h-full w-3/5 bg-slate-300 justify-center rounded-tr-2xl p-5">
@@ -70,7 +70,10 @@ const Loginpage = (props: Props) => {
               </button>
             ))}
           </div>
-          <Link to={"/"} className="flex space-x-1 sm:space-x-2 justify-center mt-5 p-3 items-center text-primary_hover group">
+          <Link
+            to={"/"}
+            className="flex space-x-1 sm:space-x-2 justify-center mt-5 p-3 items-center text-primary_hover group"
+          >
             <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
