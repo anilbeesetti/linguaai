@@ -33,8 +33,6 @@ const httpTrigger: AzureFunction = async function (
     responseType: "json",
   });
 
-  console.log(response);
-
   var responseMessage = "";
 
   if (response.status == 200) {
