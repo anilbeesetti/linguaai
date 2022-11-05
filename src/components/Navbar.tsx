@@ -11,7 +11,7 @@ const Navbar = (props: NavbarProps) => {
   return (
     <nav className="px-2 sm:px-4 py-2.5 bg-white shadow-md">
       <div className="container flex flex-wrap justify-between items-center mx-auto max-w-6xl">
-        <LogoLink />
+        <LogoLink to="/home" />
         <div className="flex items-center">
           <span>{auth.clientPrincipal?.userDetails}</span>
           <button
