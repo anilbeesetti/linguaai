@@ -3,7 +3,7 @@ import { OptionType } from "../types/Types";
 type Props = {
   id: string;
   label: string;
-  defaultValue: string;
+  defaultValue?: string;
   options: OptionType[] | undefined;
   value?: string | number | readonly string[] | undefined;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
@@ -31,7 +31,6 @@ const StyledOption = ({
         value={value}
         onChange={onChange}
       >
-        <option value="">{defaultValue}</option>
         {options?.map((option) => (
           <option
             value={option.value}
