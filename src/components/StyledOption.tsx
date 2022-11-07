@@ -5,6 +5,7 @@ type Props = {
   label: string;
   defaultValue?: string;
   options: OptionType[] | undefined;
+  disabled?: boolean;
   value?: string | number | readonly string[] | undefined;
   onChange?: (e: React.ChangeEvent<HTMLSelectElement>) => void;
 };
@@ -14,6 +15,7 @@ const StyledOption = ({
   label,
   options,
   defaultValue,
+  disabled,
   value,
   onChange,
 }: Props) => {
@@ -30,6 +32,7 @@ const StyledOption = ({
         className="bg-white border border-gray-200 text-sm rounded-md block w-full p-2.5"
         value={value}
         onChange={onChange}
+        disabled={disabled}
       >
         {options?.map((option) => (
           <option
