@@ -4,6 +4,7 @@ import StyledOption from "../../components/StyledOption";
 import PrimaryButton from "../../components/PrimaryButton";
 import InputsCard from "../../components/InputsCard";
 import ResultCard from "../../components/ResultCard";
+import dots from "../../assets/dots.svg";
 import { TypeWriterText } from "../../components/TypeWriterText";
 import { Link } from "react-router-dom";
 
@@ -12,7 +13,7 @@ type Props = {};
 const LandingPage = (props: Props) => {
   return (
     <div>
-      <div className="bg-white w-screen h-screen">
+      <div className="bg-slate-50 w-screen">
         <LandingNavbar />
         <div className="container mt-8 mx-auto px-4 sm:px-6 py-2.5">
           <div className="mx-auto text-center">
@@ -43,7 +44,6 @@ const LandingPage = (props: Props) => {
           </div>
         </div>
       </div>
-      <div className="w-screen h-screen bg-blue-100/20"></div>
     </div>
   );
 };

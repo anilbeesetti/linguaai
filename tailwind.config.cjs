@@ -28,6 +28,7 @@ module.exports = {
       },
       fontFamily: {
         display: ["Playfair Display", "serif"],
+        poppins: ["Poppins", "sans-serif"],
       },
     },
   },

@@ -2,6 +2,7 @@ import github from "../../assets/github.svg";
 import google from "../../assets/google.svg";
 import meta from "../../assets/meta.svg";
 import microsoft from "../../assets/microsoft.svg";
+import azure from "../../assets/azure.svg";
 import { useAuthContext } from "../../hooks/useAuthContext";
 import LogoLink from "../../components/LogoLink";
 import { Link } from "react-router-dom";
@@ -42,22 +43,30 @@ const Loginpage = (props: Props) => {
 
   return (
     <div className="w-full h-full flex flex-col">
-      <div className="w-full ml-4">
+      <div className="flex my-3">
         <LogoLink to="/" />
       </div>
       <div className="flex w-full justify-center items-center h-full">
-        <section className="hidden md:flex flex-col h-full w-3/5 bg-slate-300 justify-center rounded-tr-2xl p-5">
+        <section className="hidden md:flex flex-col h-full w-3/5 bg-slate-200 rounded-tr-2xl px-7 py-5 justify-center">
           <h1 className=" text-primary font-bold text-4xl">
-            Get Started <br />
-            with lingua Ai
+            <span className="text-2xl font-semibold">
+              Get Started <br />
+            </span>
+            with lingua AI
           </h1>
-          <p className=" text-slate-500 mt-4">
-            Sign up and start using lingua Ai to enhance your language skills
+          <p className=" text-slate-500 mt-4 tracking-wide">
+            Sign up and start using lingua AI to enhance your language skills
           </p>
+          <div className="mt-5">
+            <span>Powered by</span>
+            <a href="https://azure.microsoft.com">
+              <img src={azure} alt="azure" className="w-10 h-10" />
+            </a>
+          </div>
         </section>
         <section className="w-full h-full flex flex-col justify-center items-start md:w-2/5 md:p-8 p-4">
           <h1 className="text-3xl font-bold mb-2">Register / Sign in</h1>
-          <p className="mb-6 text-slate-600">Login in with account you own</p>
+          <p className="mb-6 text-slate-500">Get started with your account</p>
 
           <div className=" flex flex-col w-full md:max-w-lg space-y-3">
             {providers.map((provider) => (
