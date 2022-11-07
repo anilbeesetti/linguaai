@@ -28,8 +28,8 @@ const ResultCard = ({
       {effect && (
         <div className="absolute block inset-0 bg-slate-600 rounded-2xl -rotate-2"></div>
       )}
-      <div className="rounded-2xl transition shadow-lg w-full relative bg-white">
-        <div className="p-4 flex flex-row items-center gap-2">
+      <div className="rounded-2xl transition shadow-lg w-full relative bg-white p-4">
+        <div className="flex flex-row items-center gap-2">
           {isLoading ? (
             <div className="flex relative w-7 h-7 rounded-full items-center justify-center">
               <div className="rounded-full h-6 w-6 bg-primary-100"></div>

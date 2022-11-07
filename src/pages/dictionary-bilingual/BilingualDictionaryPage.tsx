@@ -72,7 +72,7 @@ const BilingualDictionaryPage = () => {
   return (
     <div className="px-4 py-5 flex flex-col gap-5 container mx-auto items-start max-w-6xl">
       <InputsCard
-        title="Current Word"
+        title="Bilingual Dictionary"
         subTitle="write the word you want to get info below"
         icon={
           <svg
@@ -122,7 +122,7 @@ const BilingualDictionaryPage = () => {
         isError={lookup.isError}
         error={getErrorMessage()}
         effect={false}
-        title="Bilingual Dictionary"
+        title="Lookup Response"
         subtitle="The following are the translations of the word"
       >
         <div className="mt-5">

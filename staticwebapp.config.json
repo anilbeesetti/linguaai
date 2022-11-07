@@ -23,6 +23,10 @@
         {
             "route": "/api/*",
             "allowedRoles": ["authenticated"]
+        },
+        {
+            "route": "/.auth/login/twitter",
+            "statusCode": 404
         }
     ]
 }

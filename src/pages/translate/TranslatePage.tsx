@@ -13,7 +13,7 @@ type Props = {};
 const TranslatePage = (props: Props) => {
   const [text, setText] = useState("");
   const [currentLanguage, setCurrentLanguage] = useState("");
-  const [translateToLanguage, setTranslateToLanguage] = useState("");
+  const [translateToLanguage, setTranslateToLanguage] = useState("es");
 
   const MAX_LENGTH = 2000;
   const { data: languageOptions } = useTranslationLanguagesData();
@@ -31,20 +31,30 @@ const TranslatePage = (props: Props) => {
   return (
     <div className="px-4 py-5 flex flex-col md:flex-row md:py-8 gap-5 container mx-auto items-start max-w-6xl">
       <InputsCard
-        title="Current Text"
+        title="Text Translate"
         subTitle="write the text you want to translate below"
       >
         <StyledOption
           label="Current Language"
           id="current_language"
-          defaultValue="Auto detect"
-          options={languageOptions}
+          value={currentLanguage}
+          options={
+            languageOptions
+              ? [
+                  {
+                    title: "Auto detect",
+                    value: "",
+                  },
+                  ...languageOptions,
+                ]
+              : []
+          }
           onChange={(e) => setCurrentLanguage(e.target.value)}
         />
         <StyledOption
           label="Translate To"
           id="translate_to"
-          defaultValue="Select a language to translate"
+          value={translateToLanguage}
           options={languageOptions}
           onChange={(e) => setTranslateToLanguage(e.target.value)}
         />
@@ -69,8 +79,8 @@ const TranslatePage = (props: Props) => {
         isError={translate.isError}
         isSuccess={translate.isSuccess}
         error={translate.error?.message!!}
-        title="Translated Text"
-        subtitle="The following code is translated"
+        title="Translation respose"
+        subtitle="The following text is translated"
         effect={true}
       >
         {translate.data &&

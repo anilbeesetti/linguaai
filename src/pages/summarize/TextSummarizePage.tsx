@@ -86,7 +86,7 @@ const TextSummarizePage = (props: Props) => {
         isError={summarize.isError}
         isSuccess={summarize.isSuccess}
         error={summarize.error?.message!!}
-        title="Summarized text"
+        title="Summarize Response"
         subtitle="The following text is summarized"
         effect={true}
       >

@@ -57,7 +57,7 @@ const EnglishDictionaryPage = (props: Props) => {
   return (
     <div className="px-4 py-5 flex flex-col gap-5 container mx-auto items-start max-w-6xl">
       <InputsCard
-        title="Lookup English Word"
+        title="English Dictionary"
         subTitle="A word you wish to lookup"
         icon={
           <svg
@@ -91,7 +91,7 @@ const EnglishDictionaryPage = (props: Props) => {
         isError={definition.isError}
         error={getErrorMessage()}
         effect={false}
-        title="Dictionary"
+        title="Lookup Response"
         subtitle="The following are the definitions of word"
         idleText="Lookup something to get info"
       >
