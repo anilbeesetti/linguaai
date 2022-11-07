@@ -95,7 +95,7 @@ const Tools = [
 
 const HomePage = (props: Props) => {
   return (
-    <div className="px-3 sm:px-4 py-5 mt-8 flex flex-col items-center">
+    <div className="px-3 sm:px-4 py-5 mt-8 mx-auto">
       <h1 className=" text-3xl sm:text-4xl font-bold mb-4 text-center">
         👋🏻 Hey, what will you learn today?
       </h1>
