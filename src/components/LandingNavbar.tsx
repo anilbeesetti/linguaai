@@ -4,7 +4,7 @@ import LogoLink from "./LogoLink";
 
 type Props = {};
 
-const navItems = ["one", "two", "three", "four"];
+const navItems = ["How it works", "two", "three", "four"];
 
 const LandingNavbar = (props: Props) => {
   const [openMenu, setOpenMenu] = useState(false);
@@ -62,9 +62,12 @@ const LandingNavbar = (props: Props) => {
         >
           <ul className="flex flex-col p-4 rounded-lg mt-2 bg-white shadow-md md:shadow-none border border-gray-300 absolute left-0 right-0 md:static md:flex-row md:items-center md:space-x-8 md:mt-0 md:text-sm md:font-medium md:bg-transparent md:m-0 md:border-0">
             {navItems.map((navString) => (
-              <li key={navString} className="md:hover:scale-110 transition">
+              <li
+                key={navString}
+                className="md:hover:scale-110 transition text-gray-600"
+              >
                 <a
-                  href="#"
+                  href="#how-it-works"
                   className="block py-2 px-4 text-center rounded hover:bg-slate-200 md:hover:bg-transparent md:border-0 md:hover:text-primary_hover md:p-0"
                 >
                   {navString}
