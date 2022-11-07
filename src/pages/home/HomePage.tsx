@@ -97,7 +97,7 @@ const HomePage = (props: Props) => {
   return (
     <div className="px-3 sm:px-4 py-5 mt-8 flex flex-col items-center">
       <h1 className=" text-3xl sm:text-4xl font-bold mb-4 text-center">
-        Hey, what will you learn today?
+        👋🏻 Hey, what will you learn today?
       </h1>
       <p className="mb-10 tracking-wide text-gray-800 text-center">
         Get started by selecting a tool below.
