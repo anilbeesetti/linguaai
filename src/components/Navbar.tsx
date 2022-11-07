@@ -9,13 +9,13 @@ const Navbar = (props: NavbarProps) => {
   const auth = useAuthContext();
 
   return (
-    <nav className="px-2 sm:px-4 py-2.5 bg-white shadow-md">
+    <nav className="px-2 sm:px-4 py-4 sm:py-6 bg-white border border-b-gray-200">
       <div className="container flex flex-wrap justify-between items-center mx-auto max-w-6xl">
         <LogoLink to="/home" />
         <div className="flex items-center">
           <span>{auth.clientPrincipal?.userDetails}</span>
           <button
-            className=" inline-flex items-center p-2 ml-2 text-sm text-black rounded-full hover:scale-[1.1] hover:bg-slate-300 focus:outline-none transition"
+            className=" inline-flex items-center p-1 ml-1 text-sm text-black rounded-full hover:scale-[1.1] hover:bg-slate-300 focus:outline-none transition"
             onClick={() => setShowMenu(!showMenu)}
           >
             <svg
