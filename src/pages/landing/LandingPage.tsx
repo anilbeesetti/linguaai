@@ -1,11 +1,6 @@
 import LandingNavbar from "../../components/LandingNavbar";
 import TextareaAutosize from "react-textarea-autosize";
-import StyledOption from "../../components/StyledOption";
 import PrimaryButton from "../../components/PrimaryButton";
-import InputsCard from "../../components/InputsCard";
-import ResultCard from "../../components/ResultCard";
-import dots from "../../assets/dots.svg";
-import { TypeWriterText } from "../../components/TypeWriterText";
 import { Link } from "react-router-dom";
 
 type Props = {};
