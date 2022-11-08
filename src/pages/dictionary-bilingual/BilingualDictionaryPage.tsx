@@ -13,8 +13,8 @@ import { WordTranslationWithExamples } from "./components/WordTranslationWithExa
 const BilingualDictionaryPage = () => {
   const [word, setWord] = useState("");
   const [lookupParams, setLookupParams] = useState({} as LookupParams);
-  const [sourceLanguage, setSourceLanguage] = useState("");
-  const [targetLanguage, setTargetLanguage] = useState("");
+  const [sourceLanguage, setSourceLanguage] = useState("en");
+  const [targetLanguage, setTargetLanguage] = useState("es");
   const { data } = useDictionaryLanguagesData();
   const lookup = useDictionaryLookupData(lookupParams);
   const MAX_LENGTH = 100;
@@ -96,14 +96,14 @@ const BilingualDictionaryPage = () => {
             <StyledOption
               label="Source language"
               id="current_language"
-              defaultValue="Select a base language"
+              value={sourceLanguage}
               options={getCurrentLanguageOptions()}
               onChange={(e) => setSourceLanguage(e.target.value)}
             />
             <StyledOption
               label="Target language"
               id="translate_to"
-              defaultValue="Select a language to search"
+              value={targetLanguage}
               options={getDictionaryLanguageOptions()}
               onChange={(e) => setTargetLanguage(e.target.value)}
             />
