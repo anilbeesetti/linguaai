@@ -2,10 +2,13 @@ type ResponseInfoIconProps = {
   isError: boolean;
   isSuccess: boolean;
 };
-export const ResponseInfoIcon = ({ isError, isSuccess }: ResponseInfoIconProps) => {
-  const widthHeight = "w-5 h-5";
+export const ResponseInfoIcon = ({
+  isError,
+  isSuccess,
+}: ResponseInfoIconProps) => {
+  const widthHeight = "w-6 h-6";
   const bgColor = isSuccess
-    ? "bg-primary_green_surface"
+    ? "bg-primary-200/30"
     : isError
     ? "bg-primary_red_surface"
     : "bg-slate-600";

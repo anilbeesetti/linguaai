@@ -43,7 +43,7 @@ const Loginpage = (props: Props) => {
 
   return (
     <div className="w-full h-full flex flex-col">
-      <div className="flex my-3">
+      <div className="flex my-3 mx-3">
         <LogoLink to="/" />
       </div>
       <div className="flex w-full justify-center items-center h-full">
