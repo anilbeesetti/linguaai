@@ -61,7 +61,7 @@ const HowItWorks = () => {
   return (
     <div className="relative w-full max-w-5xl">
       <div className="absolute block inset-0 bg-slate-600 rounded-2xl -rotate-1 md:-rotate-2"></div>
-      <div className=" relative p-8 flex flex-col md:flex-row md:divide-x-2 md:divide-y-0 divide-y-2 bg-white rounded-2xl shadow-2xl w-full">
+      <div className=" relative p-6 md:p-8 flex flex-col md:flex-row md:divide-x-2 md:divide-y-0 divide-y-2 bg-white rounded-2xl shadow-2xl w-full">
         <div className="w-full md:mr-10 mb-5 md:mb-0">
           <div className="flex flex-row items-center gap-2">
             <div className="w-fit h-fit rounded-full p-1 bg-slate-300">
@@ -71,7 +71,7 @@ const HowItWorks = () => {
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-5 h-5"
+                className="w-6 h-6"
               >
                 <path
                   strokeLinecap="round"

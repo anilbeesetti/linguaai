@@ -16,7 +16,9 @@ const LandingNavbar = (props: Props) => {
   return (
     <nav className="px-2 sm:px-4 py-2.5 bg-white">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <LogoLink to="/" />
+        <div className="ml-2">
+          <LogoLink to="/" />
+        </div>
         <button
           className=" inline-flex items-center p-2 ml-2 text-sm text-black rounded-lg md:hidden hover:bg-gray-300 focus:outline-none"
           onClick={toggleMenu}
