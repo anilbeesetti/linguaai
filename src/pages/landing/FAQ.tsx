@@ -1,14 +1,14 @@
 import { useState } from "react";
 
 export const FAQ = () => {
-  const [openId, setOpenId] = useState(0);
+  const [openId, setOpenId] = useState(1);
 
   const faqs = [
     {
       id: 1,
       question: "Is LinguaAI free to use?",
       answer:
-        "yes, for the time being LinguaAI is free to use for all. Once we add AZURE OPENAI powered tools to LinguaAI then we will introduce pricing options.",
+        "yes, for the time being LinguaAI is free to use for all. Once we add AZURE OPENAI powered tools to LinguaAI then we will introduce pricing options. Until then use the resources efficiently as we have to pay for already available tools and web hosting.",
     },
     {
       id: 2,
@@ -17,9 +17,20 @@ export const FAQ = () => {
     },
     {
       id: 3,
-      question: "Is there chance to add more advanced AI tools for language",
+      question: "Is there chance to add more advanced AI tools for language?",
       answer:
         "Offcourse, we will add more ai tools. Currently AZURE OPENAI is in preview, once it will be available to public we will add more advanced AI tools for langauges and content writing",
+    },
+    {
+      id: 4,
+      question: "How can we request new feature?",
+      answer: "You can request new feature on github issues page",
+    },
+    {
+      id: 5,
+      question: "When will add azure openai based langauge tools?",
+      answer:
+        "We will add those tools as fast as possible once azure openai is out of preview. Stay tuned for those features. Meanwhile follow us on social media for further updates",
     },
   ];
   return (
