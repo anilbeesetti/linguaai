@@ -2,6 +2,7 @@ import LandingNavbar from "../../components/LandingNavbar";
 import TextareaAutosize from "react-textarea-autosize";
 import PrimaryButton from "../../components/PrimaryButton";
 import { Link } from "react-router-dom";
+import logo from "../../assets/logo.svg";
 
 type Props = {};
 
@@ -36,6 +37,9 @@ const LandingPage = (props: Props) => {
               See how it works!
             </h2>
             <HowItWorks />
+          </div>
+          <div className="mt-10">
+            <Footer />
           </div>
         </div>
       </div>
@@ -95,19 +99,19 @@ const HowItWorks = () => {
         </div>
         <div className="w-full md:pl-10 pt-5 md:pt-0">
           <div className="flex flex-row items-center gap-2 mb-5">
-            <div className="w-fit h-fit rounded-full p-1 bg-slate-300">
+            <div className="w-fit h-fit rounded-full p-1 bg-primary-200/30">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
                 viewBox="0 0 24 24"
                 strokeWidth={1.5}
                 stroke="currentColor"
-                className="w-5 h-5"
+                className="w-6 h-6"
               >
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M10.5 21l5.25-11.25L21 21m-9-3h7.5M3 5.621a48.474 48.474 0 016-.371m0 0c1.12 0 2.233.038 3.334.114M9 5.25V3m3.334 2.364C11.176 10.658 7.69 15.08 3 17.502m9.334-12.138c.896.061 1.785.147 2.666.257m-4.589 8.495a18.023 18.023 0 01-3.827-5.802"
+                  d="M4.5 12.75l6 6 9-13.5"
                 />
               </svg>
             </div>
@@ -142,6 +146,60 @@ const HowItWorks = () => {
             ))}
           </div>
         </div>
+      </div>
+    </div>
+  );
+};
+
+const Footer = () => {
+  return (
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-10">
+      <div className="col-span-2">
+        <img src={logo} alt="lingua AI logo" className="h-7" />
+        <p className="my-3 text-sm tracking-wide leading-6">
+          Automatically translate, summarize text for your needs in seconds.
+          Unleash the most advanced AI langauge tools to boost your language
+          skills and productivity.
+        </p>
+        <span>© 2022 LinguaAI. All rights reserved.</span>
+      </div>
+      <div>
+        <h3 className="font-semibold uppercase text-slate-500 tracking-wider mb-2">
+          Quick Links
+        </h3>
+        <ul className="space-y-1">
+          <li className="hover:text-primary_hover cursor-pointer text-sm">
+            How it works
+          </li>
+          <li className="hover:text-primary_hover cursor-pointer text-sm">
+            Contact us
+          </li>
+          <li className="hover:text-primary_hover cursor-pointer text-sm">
+            FAQ
+          </li>
+          <li className="hover:text-primary_hover cursor-pointer text-sm">
+            About
+          </li>
+        </ul>
+      </div>
+      <div>
+        <h3 className="font-semibold uppercase text-slate-500 tracking-wider mb-2">
+          Social Media
+        </h3>
+        <ul className="space-y-1">
+          <li className="hover:text-primary_hover cursor-pointer text-sm">
+            Github
+          </li>
+          <li className="hover:text-primary_hover cursor-pointer text-sm">
+            Instagram
+          </li>
+          <li className="hover:text-primary_hover cursor-pointer text-sm">
+            Facebook
+          </li>
+          <li className="hover:text-primary_hover cursor-pointer text-sm">
+            Twitter
+          </li>
+        </ul>
       </div>
     </div>
   );
