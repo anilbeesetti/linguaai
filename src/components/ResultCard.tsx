@@ -40,7 +40,7 @@ const ResultCard = ({
           )}
 
           <div>
-            <h1 className=" font-semibold text-sm">{title}</h1>
+            <h1 className=" font-semibold">{title}</h1>
             <p className=" text-xs text-gray-500">{subtitle}</p>
           </div>
         </div>

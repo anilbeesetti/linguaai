@@ -30,7 +30,7 @@ const InputsCard = ({ title, subTitle, icon, children }: Props) => {
           )}
         </div>
         <div>
-          <h1 className=" font-semibold text-sm">{title}</h1>
+          <h1 className=" font-semibold">{title}</h1>
           <p className=" text-xs text-gray-500">{subTitle}</p>
         </div>
       </div>
