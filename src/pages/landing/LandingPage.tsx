@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { HowItWorks } from "./HowItWorks";
 import { Footer } from "./Footer";
 import { FAQ } from "./FAQ";
+import { Features } from "./Features";
 
 type Props = {};
 
@@ -33,13 +34,19 @@ const LandingPage = (props: Props) => {
             </Link>
           </div>
           <div className="flex flex-col items-center py-8" id="how-it-works">
-            <h2 className="text-2xl md:text-3xl xl:text-4xl text-slate-600 mb-10">
+            <h2 className="text-center text-2xl md:text-3xl xl:text-4xl text-slate-600 mb-10">
               See how it works!
             </h2>
             <HowItWorks />
           </div>
+          <div className="flex flex-col items-center py-8" id="features">
+            <h2 className="text-center text-2xl md:text-3xl xl:text-4xl text-slate-600 mb-10">
+              Enhance Language skills uniquely
+            </h2>
+            <Features />
+          </div>
           <div className="flex flex-col items-center py-8" id="faq">
-            <h2 className="text-2xl md:text-3xl xl:text-4xl text-slate-600 mb-10">
+            <h2 className="text-center text-2xl md:text-3xl xl:text-4xl text-slate-600 mb-10">
               Frequently Asked Questions
             </h2>
             <FAQ />

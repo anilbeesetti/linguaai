@@ -59,7 +59,7 @@ const Tools = [
         viewBox="0 0 24 24"
         strokeWidth={1.5}
         stroke="currentColor"
-        className="w-fill h-fill bg-red-200 p-1 rounded"
+        className="w-fill h-fill bg-purple-200 p-1 rounded"
       >
         <path
           stroke-linecap="round"
