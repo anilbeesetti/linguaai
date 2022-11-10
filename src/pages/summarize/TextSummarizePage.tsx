@@ -58,8 +58,8 @@ const TextSummarizePage = (props: Props) => {
         }
       >
         <StyledOption
-          label="Current Language"
-          id="current_language"
+          label="Max Sentence Count"
+          id="sentence_count"
           defaultValue=""
           options={getNumberOptions()}
           value={sentenceCount}
